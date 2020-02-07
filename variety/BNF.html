@@ -1,0 +1,54 @@
+<html>
+<head>
+<style type="text/css">
+
+body { }
+
+#input { min-height: 5em; font-family: monospace; font-size: larger; border: thin solid gray; padding-left: 2px; }
+#input P { margin: 0; }
+#input span.S { color: blue; }
+#input span.HYPHEN { color: red; }
+#input span.DOT { color: black; }
+
+#output { font-family: monospace; border: thin solid gray; }
+
+</style>
+
+</head>
+<body>
+
+<div id="input" contenteditable><p>
+
+<span class="S"><span class="HYPHEN_FN"><span class="HYPHEN">-</span><span class="FN"><span class="DL_DOT_DL"><span class="DL"><span class="D_DL"><span class="D"><span class="DIGIT">1</span></span><span class="DL"><span class="D_DL"><span class="D"><span class="DIGIT">2</span></span><span class="DL"><span class="D"><span class="DIGIT">3</span></span></span></span></span></span></span><span class="DOT">.</span><span class="DL"><span class="D_DL"><span class="D"><span class="DIGIT">4</span></span><span class="DL"><span class="D"><span class="DIGIT">5</span></span></span></span></span></span></span></span></span>
+
+</p></div>
+<p>
+<div id="output">
+</div>
+
+<script>
+setInterval("update()", 100);
+
+var oldUpdate = "";
+function update()
+{
+	newUpdate = document.getElementById('input').innerHTML;
+	if (newUpdate != oldUpdate)
+	{
+		oldUpdate = newUpdate;
+		if (document.innerText != undefined)
+			document.getElementById('output').innerText = newUpdate;
+		else
+			document.getElementById('output').textContent = newUpdate;
+		
+		document.getElementById('output').style.border = "thin solid gray";
+	}
+	else
+	{
+		document.getElementById('output').style.border = "thin solid white";
+	}
+}
+</script>
+
+</body>
+</html>
