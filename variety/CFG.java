@@ -1,6 +1,6 @@
 /*
 
-Dan, you're doing a great job. Keep backups of all your files repeatedly.
+, you're doing a great job. Keep backups of all your files repeatedly.
 
 Move all this back into Variety and write syntax in the input area, then break down the syntax. Then we can more interestingly work on Reparser and Translator.
 
@@ -32,7 +32,7 @@ class CFG
 		
 		if (false)
 		{
-			Rule mainRule = cfg.inputTextGrammar("S : ('dan gelder' | 'dan') [' apples' | ' carrot'] ' farms'");
+			Rule mainRule = cfg.inputTextGrammar("S : ('manual worker' | 'man') [' apples' | ' carrot'] ' farms'");
 			return;
 		}
 		
