@@ -7,11 +7,9 @@ class Butternut
 		final Butternut b = new Butternut("S: '1' '2' '3'"
 									/*+ "S: NAME ',' S | NAME \n"
 									+ "NAME: FIRST ' ' LAST \n"
-									+ "FIRST: 'DANIEL' | 'DANNY' | 'DAN' \n"
-									+ "LAST: 'GELDER' | 'DAPPERS'"*/);
-		
-		//b.setText(0, 0, "DAN GELDER,DANNY DAPPERS");
-		
+									+ "FIRST: 'Manuel' | 'Manny' | 'Man' \n"
+									+ "LAST: 'Worker'"*/);
+				
 		b.tree.walk(new ResultWalker() {
 			int indent = 0;
 			String spaces() 
@@ -55,9 +53,9 @@ class Butternut
 	Butternut(String grammar)
 	{
 		main = selectGrammar(grammar);
-		text = "123DAN GELDER,DANNY DAPPERS".toCharArray();//new char[0];
+		text = "123CAN Weldoer".toCharArray();//new char[0];
 		tree = main.parse(0);
-		//experimentalParser("DAN GELDER,DANNY DAPPERS".toCharArray());
+		//experimentalParser("123CAN Weldoer".toCharArray());
 	}
 	
 	// experimental
