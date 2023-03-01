@@ -1150,14 +1150,12 @@ class CFG
 		*/
 		
 		
-		grammar = "S : ('dan gelder' | 'dan') [' apples' | ' carrot'] ' farms'";
+		grammar = "S : ('test' | 't') [' apples' | ' carrot'] ' farms'";
 		
 		GrammarParser gp = new GrammarParser();
 		gp.installRules(this, grammar);
 		gp.printOutline();
-		
-		//gp.init("dan gelder carrot farms");
-		
+				
 		return null;
 	}
 
