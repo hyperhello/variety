@@ -4,11 +4,7 @@ class Butternut
 {
 	public static void main(String arg[])
 	{
-		final Butternut b = new Butternut("S: '1' '2' '3'"
-									/*+ "S: NAME ',' S | NAME \n"
-									+ "NAME: FIRST ' ' LAST \n"
-									+ "FIRST: 'Manuel' | 'Manny' | 'Man' \n"
-									+ "LAST: 'Worker'"*/);
+		final Butternut b = new Butternut("S: '1' '2' '3'");
 				
 		b.tree.walk(new ResultWalker() {
 			int indent = 0;
